@@ -25,24 +25,23 @@ public class Main {
 
     @AfterMethod
     public void fermerChrome() {
-        driver.quit();
+     //   driver.quit();
     }
 
     @Test
     public void testAmazon() {
         // Arrange
-
+String data = "Nintendo Switch" ;
         // Act
         HomePage homePage = new HomePage(driver);
         String result = homePage
-                .enterSearchedobject()
+                .enterSearchedobject(data)
                 .chooseProduct()
-                .addProducttoCart()
-                .GotoCart()
-                .objectTitle()
+                 .getTitle()
                 ;
 
         // Asserts
-        Assert.assertTrue(result.contains("Nintendo Switch"), "msg not found");
+        Assert.assertTrue(result.contains(data));
+        System.out.print(result.contains(data));
     }
 }

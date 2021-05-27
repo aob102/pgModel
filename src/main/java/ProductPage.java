@@ -6,10 +6,10 @@ public class ProductPage {
     public ProductPage(WebDriver driver) {
         this.driver = driver;
     }
+By TitleElement = By.id("title") ;
+    public String getTitle () {
+     String Title =driver.findElement(TitleElement).getText();
 
-    public Succesfulpage addProducttoCart() {
-     driver.findElement(By.id("add-to-cart-button")).click();
-
-    return new Succesfulpage(driver) ;
+    return Title ;
     }
 }

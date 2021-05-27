@@ -10,7 +10,7 @@ public class ResultPage {
 
     public ProductPage chooseProduct() {
 
-        driver.findElement(By.xpath("//*[@data-uuid='s-searchgrid-carousel:0']")).click();
+        driver.findElement(By.cssSelector("[data-uuid='s-searchgrid-carousel:0']")).click();
 
     return  new ProductPage(driver);
     }
