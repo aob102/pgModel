@@ -37,8 +37,8 @@ String data = "Nintendo Switch" ;
         String result = homePage
                 .enterSearchedobject(data)
                 .chooseProduct()
-                 .getTitle()
-                ;
+                 .getTitle();
+
 
         // Asserts
         Assert.assertTrue(result.contains(data));
