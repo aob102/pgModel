@@ -25,7 +25,7 @@ public class Main {
 
     @AfterMethod
     public void fermerChrome() {
-     //   driver.quit();
+        driver.quit();
     }
 
     @Test
