@@ -2,14 +2,14 @@ pipeline {
     agent any
 
     stages {
-        stage('Build') {
+        stage('Execution rights') {
             steps {
-                echo 'Building..'
+                sh 'chmod +x gradlew'
             }
         }
         stage('Test') {
             steps {
-                echo 'Testing..'
+                sh './gradlew clean test'
             }
         }
         stage('Deploy') {
@@ -19,4 +19,3 @@ pipeline {
         }
     }
 }
-
