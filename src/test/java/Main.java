@@ -31,17 +31,17 @@ public class Main {
     @Test
     public void testAmazon() {
         // Arrange
-String data = "Nintendo Switch" ;
+String Keyword = "Nintendo Switch" ;
         // Act
         HomePage homePage = new HomePage(driver);
         String result = homePage
-                .enterSearchedobject(data)
+                .enterSearchedobject(Keyword)
                 .chooseProduct()
                  .getTitle();
 
 
         // Asserts
-        Assert.assertTrue(result.contains(data));
-        System.out.print(result.contains(data));
+        Assert.assertTrue(result.contains(Keyword));
+        System.out.print(result.contains(Keyword));
     }
 }
